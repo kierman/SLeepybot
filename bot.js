@@ -18,5 +18,10 @@ client.on('message', message => {
     }
 });
 
+var http = require("http");
+setInterval(function() {
+    http.get("http://sleepybotdisc.herokuapp.com");
+}, 300000); // every 5 minutes (300000)
+
 // THIS MUST BE THIS WAY
 client.login(process.env.BOT_TOKEN);
